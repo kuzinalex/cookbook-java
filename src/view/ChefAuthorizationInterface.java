@@ -1,13 +1,26 @@
 package view;
 
-import controller.ChefAutorizationController;
+import controller.ChefAuthorizationController;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ChefAuthorizationInterface extends JFrame {
-    ChefAutorizationController controller;
 
-    public ChefAuthorizationInterface(ChefAutorizationController controller) {
+    ChefAuthorizationController controller;
+
+    private JPanel componentPanel = new JPanel();
+    private JButton authorizationButton= new JButton("Войти");
+
+    public ChefAuthorizationInterface(ChefAuthorizationController controller) {
         this.controller = controller;
+
+        authorizationButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 }
